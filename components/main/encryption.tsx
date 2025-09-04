@@ -7,7 +7,18 @@ import { slideInFromTop } from "@/lib/motion";
 
 export const Encryption = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20">
+    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20 py-14">
+      {/* Background portrait with faded border (above video, below content) */}
+      <div className="absolute inset-0 z-[1] flex items-center justify-center opacity-30">
+        <div className="rounded-2xl overflow-hidden border border-[#7042F88B] shadow-[0_0_60px_rgba(112,66,248,0.25)]">
+          <img
+            src="/formal pic.png"
+            alt="Praduman portrait"
+            className="w-[520px] h-[520px] object-cover"
+            draggable={false}
+          />
+        </div>
+      </div>
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
@@ -50,14 +61,14 @@ export const Encryption = () => {
         </div>
       </div>
 
-      <div className="w-full flex items-start justify-center absolute">
+      <div className="w-full flex items-start justify-center absolute z-0">
         <video
           loop
           muted
           autoPlay
           playsInline
           preload="false"
-          className="w-full h-auto"
+          className="w-full h-auto opacity-40"
         >
           <source src="/videos/encryption-bg.webm" type="video/webm" />
         </video>
