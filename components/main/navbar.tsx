@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdCall } from "react-icons/md";
 
 import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 
@@ -72,6 +72,14 @@ export const Navbar = () => {
           >
             <MdEmail className="h-6 w-6 text-white" />
           </Link>
+          {/* Call Icon */}
+          <Link
+            href="tel:+919520949165"
+            className="flex items-center"
+            title="Call"
+          >
+            <MdCall className="h-6 w-6 text-white" />
+          </Link>
         </div>
 
         {/* Hamburger Menu */}
@@ -128,6 +136,14 @@ export const Navbar = () => {
               title="Email"
             >
               <MdEmail className="h-8 w-8 text-white" />
+            </Link>
+            {/* Call Icon */}
+            <Link
+              href="tel:+919520949165"
+              className="flex items-center"
+              title="Call"
+            >
+              <MdCall className="h-8 w-8 text-white" />
             </Link>
           </div>
         </div>
