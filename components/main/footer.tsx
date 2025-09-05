@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <>
       <div className="h-28" /> {/* Add gap above the footer */}
-      <div className="w-full h-full bg-white/10 text-gray-200 shadow-lg p-[15px]">
+      <div className="w-full mt-4 h-full bg-white/10 text-gray-200 shadow-lg p-[15px]">
         <div className="w-full flex flex-col items-center justify-center m-auto">
           <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 gap-8 items-start justify-between">
             {FOOTER_DATA.map((column, idx) => (
@@ -20,9 +20,10 @@ export const Footer = () => {
               >
                 <h3
                   className={
-                    idx === 0
-                      ? "font-bold text-[22px] mb-3 text-left tracking-wide"
-                      : "font-bold text-[20px] mb-3 text-center tracking-wide"
+                    (idx === 0
+                      ? "font-bold text-[22px] mb-3 text-left tracking-wide "
+                      : "font-bold text-[20px] mb-3 text-center tracking-wide ") +
+                    "bg-gradient-to-r from-blue-400 via-blue-600 to-cyan-400 bg-clip-text text-transparent"
                   }
                 >
                   {column.title}
