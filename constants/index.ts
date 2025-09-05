@@ -278,17 +278,12 @@ export const PROJECTS = [
 
 export const FOOTER_DATA = [
   {
-    title: "Community",
+    title: "About Me",
     data: [
       {
-        name: "GitHub",
-        icon: RxGithubLogo,
-        link: "https://github.com/praduman1212",
-      },
-      {
-        name: "LinkedIn",
-        icon: RxLinkedinLogo,
-        link: "https://www.linkedin.com/in/praduman12/",
+        name: "I’m Praduman Sharma, a passionate Software Engineer from Dehradun. I’m open to relocation and remote opportunities, and I’m driven by a love for building impactful digital solutions with creativity and precision.",
+        icon: null,
+        link: null,
       },
     ],
   },
@@ -308,22 +303,22 @@ export const FOOTER_DATA = [
     ],
   },
   {
-    title: "About",
+    title: "Quick Links",
     data: [
       {
-        name: "WhatsApp Me",
+        name: "Hire Me",
         icon: null,
         link: "https://wa.me/919520949165",
       },
       {
-        name: "Learning about me",
+        name: "Learn about me",
         icon: null,
         link: "#about-me",
       },
       {
         name: "Contact Me",
         icon: null,
-        link: "mailto:",
+        link: "mailto:sharmapraduman6@gmail.com",
       },
     ],
   },

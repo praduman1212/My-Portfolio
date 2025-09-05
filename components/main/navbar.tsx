@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { MdEmail } from "react-icons/md";
 
 import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 
@@ -46,7 +47,7 @@ export const Navbar = () => {
               rel="noreferrer noopener"
               className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
             >
-              WhatsApp Me
+              Hire Me
             </Link>
           </div>
         </div>
@@ -63,6 +64,14 @@ export const Navbar = () => {
               <Icon className="h-6 w-6 text-white" />
             </Link>
           ))}
+          {/* Email Icon */}
+          <Link
+            href="mailto:sharmapraduman6@gmail.com"
+            className="flex items-center"
+            title="Email"
+          >
+            <MdEmail className="h-6 w-6 text-white" />
+          </Link>
         </div>
 
         {/* Hamburger Menu */}
@@ -96,7 +105,7 @@ export const Navbar = () => {
               className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              WhatsApp Me
+              Hire Me
             </Link>
           </div>
 
@@ -112,6 +121,14 @@ export const Navbar = () => {
                 <Icon className="h-8 w-8 text-white" />
               </Link>
             ))}
+            {/* Email Icon */}
+            <Link
+              href="mailto:sharmapraduman6@gmail.com"
+              className="flex items-center"
+              title="Email"
+            >
+              <MdEmail className="h-8 w-8 text-white" />
+            </Link>
           </div>
         </div>
       )}
