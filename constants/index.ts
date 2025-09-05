@@ -254,32 +254,33 @@ export const OTHER_SKILL = [
 
 export const PROJECTS = [
  {
-    title: "Trendinghashtag,in",
+    title: "Trendinghashtag.in",
     description:
-      "A web app to upload and share files securely with unique links and expiry.",
+      "TrendingHashtag.in – An AI-powered hashtag generator that helps creators and businesses boost their social media reach. It provides country-specific trending hashtags, removes banned tags to ensure safe posting, and offers extra tools like couple/wedding hashtag generators and media downloaders, all in one platform.",
     image: "/projects/trendinghashtag.png",
-    link: "https://github.com/praduman1212/File-Sharing-Web-Application-",
-  },
-  {
-    title: "File Sharing Web Application",
-    description:
-      "A web app to upload and share files securely with unique links and expiry.",
-    image: "/projects/project-1.png",
-    link: "https://github.com/praduman1212/File-Sharing-Web-Application-",
+    link: "https://trendinghashtag.in/",
   },
   {
     title: "ISP Website (Hilltell)",
     description:
-      "A responsive website for an Internet Service Provider built with HTML/CSS and PHP.",
+      "HillTell.in – An ISP company website that I developed using PHP, XAMPP, and MySQL (phpMyAdmin). It highlights services like Managed WiFi, MPLS, P2P connectivity, and IP One Class, with a responsive design, integrated contact options, and an interactive chatbot for customer queries.",
     image: "/projects/hilltell.png",
-    link: "https://github.com/praduman1212/ISP_Website",
+    link: "https://hilltell.in/index.php",
   },
   {
-    title: "Notes Application",
+    title: "File Sharing Web Application",
     description:
-      "Notes CRUD app with search and persistence for quick personal knowledge.",
+      "File Sharing Web Application – A MERN stack project I developed that enables users to securely upload, share, and manage files online. Built with MongoDB, Express.js, React.js, and Node.js, it features a clean UI, fast performance, and secure file handling",
+    image: "/projects/file sharing app.png",
+    link: "https://github.com/praduman1212/File-Sharing-Web-Application-",
+  },
+  
+  {
+    title: "Portfolio Website",
+    description:
+      "A Next.js, Tailwind & Three.js personal portfolio demonstrating my expertise in full-stack development—from frontend and backend to cloud, mobile, and AI.",
     image: "/projects/project-3.png",
-    link: "https://github.com/praduman1212/notes-application",
+    link: "https://github.com/praduman1212/My-Portfolio",
   },
 ] as const;
 
