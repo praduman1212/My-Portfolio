@@ -4,6 +4,7 @@ export const siteConfig: Metadata = {
   title: "Praduman Sharma | Software Engineer",
   description: "Welcome to my portfolio.",
   keywords: [
+    "praduman-sharma",
     "reactjs",
     "nextjs",
     "vercel",

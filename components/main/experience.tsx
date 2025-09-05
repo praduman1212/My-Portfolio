@@ -1,8 +1,30 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import { Sphere, MeshDistortMaterial, OrbitControls } from "@react-three/drei";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Sphere, OrbitControls } from "@react-three/drei";
+import { TextureLoader } from "three";
 import { useRef } from "react";
+
+const EarthBall = () => {
+  const meshRef = useRef<any>();
+  const texture = useLoader(
+    TextureLoader,
+    "https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg" // realistic earth texture
+  );
+
+  // Rotate continuously
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.002;
+    }
+  });
+
+  return (
+    <Sphere args={[1, 64, 64]} ref={meshRef} scale={1.4}>
+      <meshStandardMaterial map={texture} />
+    </Sphere>
+  );
+};
 
 const experiences = [
   {
@@ -44,7 +66,6 @@ export const Experience = () => {
     offset: ["start center", "end center"],
   });
 
-  // Orb follows scroll progress (0 → top, 1 → bottom)
   const orbY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
@@ -52,26 +73,14 @@ export const Experience = () => {
       ref={containerRef}
       className="relative flex flex-col items-center justify-center py-20 overflow-hidden"
     >
-      {/* === 3D Animated Background === */}
+      {/* === Background Orb === */}
       <div className="absolute inset-0 -z-10">
         <Canvas camera={{ position: [0, 0, 6] }}>
-          <ambientLight intensity={0.4} />
-          <pointLight position={[5, 5, 5]} intensity={2} />
-          <OrbitControls
-            enableZoom={false}
-            enablePan={false}
-            autoRotate
-            autoRotateSpeed={0.6}
-          />
-          {/* Floating glowing orb */}
+          <ambientLight intensity={0.6} />
+          <directionalLight position={[3, 5, 2]} intensity={1.2} />
+          <OrbitControls enableZoom={false} enablePan={false} autoRotate />
           <Sphere visible args={[1, 100, 200]} scale={3}>
-            <MeshDistortMaterial
-              color="#9333ea"
-              distort={0.4}
-              speed={2}
-              roughness={0.2}
-              metalness={0.6}
-            />
+            <meshStandardMaterial color="#32165a" metalness={0.6} roughness={0.3} />
           </Sphere>
         </Canvas>
       </div>
@@ -86,12 +95,20 @@ export const Experience = () => {
         {/* Vertical line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[4px] bg-gradient-to-b from-purple-500 via-pink-400 to-cyan-500 shadow-[0_0_15px_rgba(147,51,234,0.7)]" />
 
-        {/* Dynamic moving orb */}
-        <motion.div
-          style={{ top: orbY }}
-          className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 shadow-[0_0_25px_rgba(34,211,238,0.9)]"
-        />
+        {/* Interactive Earth Ball */}
+<motion.div
+  style={{ top: orbY }}
+  className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90px] h-[90px] rounded-full overflow-hidden shadow-[0_0_25px_rgba(34,211,238,0.9)]"
+>
+  <Canvas camera={{ position: [0, 0, 3] }}>
+    <ambientLight intensity={0.8} />
+    <directionalLight position={[5, 3, 2]} />
+    <EarthBall />
+  </Canvas>
+</motion.div>
 
+
+        {/* Timeline Cards */}
         <div className="space-y-24">
           {experiences.map((exp, i) => (
             <motion.div
@@ -104,11 +121,7 @@ export const Experience = () => {
                 i % 2 === 0 ? "justify-start pr-12" : "justify-end pl-12"
               }`}
             >
-             
-
-              {/* Experience Card */}
               <div className="w-[85%] md:w-[46%] p-6 rounded-2xl bg-[rgba(3,0,20,0.55)] border border-[#2A0E61] shadow-md hover:shadow-cyan-500/40 transition">
-                {/* Top row: company | role | duration */}
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <div className="flex-1">
                     <div className="text-lg font-bold text-purple-300">
@@ -121,7 +134,6 @@ export const Experience = () => {
                   </div>
                 </div>
 
-                {/* Bullet Points */}
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   {exp.points.map((p, idx) => (
                     <li key={idx}>{p}</li>
