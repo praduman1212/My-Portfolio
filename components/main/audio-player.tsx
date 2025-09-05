@@ -41,12 +41,12 @@ export const AudioPlayer = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-[60] flex items-center gap-2 bg-[rgba(3,0,20,0.6)] backdrop-blur-md border border-[#2A0E61] rounded-full px-3 py-2 text-gray-200">
+    <div className="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 z-[60] flex items-center gap-1 sm:gap-2 bg-[rgba(3,0,20,0.6)] backdrop-blur-md border border-[#2A0E61] rounded-full px-2 sm:px-3 py-1 sm:py-2 text-gray-200 text-xs sm:text-sm">
       <audio ref={audioRef} src="/space-120280.mp3" loop autoPlay playsInline />
-      <button onClick={toggleMute} className="text-sm cursor-pointer">
+      <button onClick={toggleMute} className="text-xs sm:text-sm cursor-pointer">
         {isMuted ? "Unmute" : "Mute"}
       </button>
-      <span className="text-xs opacity-70">{isReady ? "Music" : "Loading"}</span>
+      <span className="text-[10px] sm:text-xs opacity-70">{isReady ? "Music" : "Loading"}</span>
     </div>
   );
 };

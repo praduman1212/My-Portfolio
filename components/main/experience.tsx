@@ -71,7 +71,7 @@ export const Experience = () => {
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center py-20 overflow-hidden"
+      className="relative flex flex-col items-center justify-center py-10 sm:py-20 overflow-hidden"
     >
       {/* === Background Orb === */}
       <div className="absolute inset-0 -z-10">
@@ -86,30 +86,29 @@ export const Experience = () => {
       </div>
 
       {/* Heading */}
-      <h2 className="text-[40px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-16">
+      <h2 className="text-2xl sm:text-4xl md:text-[40px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10 sm:mb-16">
         Experience
       </h2>
 
       {/* Timeline */}
-      <div className="relative w-full max-w-6xl">
+      <div className="relative w-full max-w-full sm:max-w-3xl md:max-w-6xl px-2 sm:px-4 md:px-0">
         {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[4px] bg-gradient-to-b from-purple-500 via-pink-400 to-cyan-500 shadow-[0_0_15px_rgba(147,51,234,0.7)]" />
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[2px] sm:w-[4px] bg-gradient-to-b from-purple-500 via-pink-400 to-cyan-500 shadow-[0_0_15px_rgba(147,51,234,0.7)]" />
 
         {/* Interactive Earth Ball */}
-<motion.div
-  style={{ top: orbY }}
-  className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90px] h-[90px] rounded-full overflow-hidden shadow-[0_0_25px_rgba(34,211,238,0.9)]"
->
-  <Canvas camera={{ position: [0, 0, 3] }}>
-    <ambientLight intensity={0.8} />
-    <directionalLight position={[5, 3, 2]} />
-    <EarthBall />
-  </Canvas>
-</motion.div>
-
+        <motion.div
+          style={{ top: orbY }}
+          className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60px] sm:w-[90px] h-[60px] sm:h-[90px] rounded-full overflow-hidden shadow-[0_0_25px_rgba(34,211,238,0.9)]"
+        >
+          <Canvas camera={{ position: [0, 0, 3] }}>
+            <ambientLight intensity={0.8} />
+            <directionalLight position={[5, 3, 2]} />
+            <EarthBall />
+          </Canvas>
+        </motion.div>
 
         {/* Timeline Cards */}
-        <div className="space-y-24">
+        <div className="space-y-12 sm:space-y-24">
           {experiences.map((exp, i) => (
             <motion.div
               key={i}
@@ -118,10 +117,10 @@ export const Experience = () => {
               transition={{ duration: 0.9, type: "spring" }}
               viewport={{ once: true }}
               className={`relative flex ${
-                i % 2 === 0 ? "justify-start pr-12" : "justify-end pl-12"
+                i % 2 === 0 ? "justify-start pr-2 sm:pr-12" : "justify-end pl-2 sm:pl-12"
               }`}
             >
-              <div className="w-[85%] md:w-[46%] p-6 rounded-2xl bg-[rgba(3,0,20,0.55)] border border-[#2A0E61] shadow-md hover:shadow-cyan-500/40 transition">
+              <div className="w-[95%] sm:w-[85%] md:w-[46%] p-4 sm:p-6 rounded-2xl bg-[rgba(3,0,20,0.55)] border border-[#2A0E61] shadow-md hover:shadow-cyan-500/40 transition">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <div className="flex-1">
                     <div className="text-lg font-bold text-purple-300">
