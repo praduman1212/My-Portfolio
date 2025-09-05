@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/sub/project-card";
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { useTypewriter } from "react-simple-typewriter";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Projects = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -77,21 +78,30 @@ export const Projects = () => {
 
       {/* Slider Container */}
       <div className="relative w-full max-w-6xl">
-        {/* Left Button */}
-        <button
-          onClick={scrollLeft}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-cyan-500 hover:to-purple-500 text-white p-4 rounded-full z-10 shadow-xl transition-transform hover:scale-110"
-        >
-          ◀
-        </button>
+  {/* Left Button */}
+<button
+  onClick={scrollLeft}
+  className="absolute left-3 top-1/2 -translate-y-1/2 
+             bg-white/10 backdrop-blur-lg border border-white/20 
+             hover:border-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] 
+             text-white p-2 rounded-lg z-10 shadow-md 
+             transition-all duration-300 hover:scale-110"
+>
+  <ChevronLeft className="w-5 h-5" />
+</button>
 
-        {/* Right Button */}
-        <button
-          onClick={scrollRight}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-cyan-500 hover:to-purple-500 text-white p-4 rounded-full z-10 shadow-xl transition-transform hover:scale-110"
-        >
-          ▶
-        </button>
+{/* Right Button */}
+<button
+  onClick={scrollRight}
+  className="absolute right-3 top-1/2 -translate-y-1/2 
+             bg-white/10 backdrop-blur-lg border border-white/20 
+             hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.7)] 
+             text-white p-2 rounded-lg z-10 shadow-md 
+             transition-all duration-300 hover:scale-110"
+>
+  <ChevronRight className="w-5 h-5" />
+</button>
+
 
         {/* Scrollable Cards */}
         <div
