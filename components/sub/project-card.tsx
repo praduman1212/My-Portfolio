@@ -8,31 +8,33 @@ type ProjectCardProps = {
   link: string;
 };
 
-export const ProjectCard = ({
-  src,
-  title,
-  description,
-  link,
-}: ProjectCardProps) => {
+export const ProjectCard = ({ src, title, description, link }: ProjectCardProps) => {
   return (
     <Link
       href={link}
       target="_blank"
       rel="noreferrer noopener"
-      className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] bg-[rgba(3,0,20,0.55)] transition hover:scale-[1.02]"
+      className="relative overflow-hidden rounded-xl shadow-lg border border-[#2A0E61] bg-[rgba(3,0,20,0.7)] transition transform hover:scale-105 hover:shadow-purple-500/40"
     >
-      <Image
-        src={src}
-        alt={title}
-        width={1000}
-        height={1000}
-        className="w-full h-[180px] sm:h-[220px] md:h-[260px] object-cover"
-      />
-      <div className="relative p-3 sm:p-4">
-        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+      <div className="p-3 sm:p-4">
+        {/* Project Title */}
+        <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-cyan-400 mb-2">
           {title}
         </h1>
-        <p className="mt-1 sm:mt-2 text-gray-300 text-sm sm:text-base">
+
+        {/* Full Image */}
+         <div className="flex-1 flex items-center justify-center p-3">
+        <Image
+          src={src}
+          alt={title}
+          width={600}
+          height={400}
+          className="max-h-[260px] w-auto object-contain"
+        />
+      </div>
+
+        {/* Description */}
+        <p className="mt-2 text-gray-300 text-sm sm:text-base">
           {description}
         </p>
       </div>

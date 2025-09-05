@@ -253,6 +253,13 @@ export const OTHER_SKILL = [
 ] as const;
 
 export const PROJECTS = [
+ {
+    title: "Trendinghashtag,in",
+    description:
+      "A web app to upload and share files securely with unique links and expiry.",
+    image: "/projects/trendinghashtag.png",
+    link: "https://github.com/praduman1212/File-Sharing-Web-Application-",
+  },
   {
     title: "File Sharing Web Application",
     description:
@@ -261,10 +268,10 @@ export const PROJECTS = [
     link: "https://github.com/praduman1212/File-Sharing-Web-Application-",
   },
   {
-    title: "ISP Website",
+    title: "ISP Website (Hilltell)",
     description:
-      "A responsive website for an Internet Service Provider built with HTML/CSS.",
-    image: "/projects/project-2.png",
+      "A responsive website for an Internet Service Provider built with HTML/CSS and PHP.",
+    image: "/projects/hilltell.png",
     link: "https://github.com/praduman1212/ISP_Website",
   },
   {
