@@ -4,6 +4,7 @@ import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
 import { Education } from "@/components/main/education";
 import { Experience } from "@/components/main/experience";
+import StatsPage from "@/components/main/StatsThreeJS";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Experience />
         <Encryption />
         <Projects />
+        <StatsPage />
       </div>
     </main>
   );
