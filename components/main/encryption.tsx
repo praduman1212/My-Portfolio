@@ -25,7 +25,7 @@ export const Encryption = () => {
               className="relative flex flex-col items-center"
             >
               <Image
-                src="/formal2.jpg"
+                src="formal2.jpg"
                 alt="Praduman portrait"
                 width={220}
                 height={220}
