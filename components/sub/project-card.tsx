@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 type ProjectCardProps = {
   src: string;
@@ -9,6 +10,8 @@ type ProjectCardProps = {
 };
 
 export const ProjectCard = ({ src, title, description, link }: ProjectCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <Link
       href={link}
@@ -23,20 +26,37 @@ export const ProjectCard = ({ src, title, description, link }: ProjectCardProps)
         </h1>
 
         {/* Full Image */}
-         <div className="flex-1 flex items-center justify-center p-3">
-        <Image
-          src={src}
-          alt={title}
-          width={600}
-          height={400}
-          className="max-h-[260px] w-auto object-contain"
-        />
-      </div>
+        <div className="flex-1 flex items-center justify-center p-3">
+          <Image
+            src={src}
+            alt={title}
+            width={600}
+            height={400}
+            className="max-h-[260px] w-auto object-contain"
+          />
+        </div>
 
         {/* Description */}
-        <p className="mt-2 text-gray-300 text-sm sm:text-base">
+        <p
+          className={`mt-2 text-gray-300 text-sm sm:text-base transition-all duration-300 ${
+            !isExpanded ? "line-clamp-4" : ""
+          }`}
+        >
           {description}
         </p>
+
+        {/* Read More / Less Button */}
+        {description.split(" ").length > 25 && ( // approx check if text is long
+          <button
+            onClick={(e) => {
+              e.preventDefault(); // prevent Link navigation
+              setIsExpanded(!isExpanded);
+            }}
+            className="mt-2 text-cyan-400 text-sm hover:underline"
+          >
+            {isExpanded ? "Read less" : "Read more"}
+          </button>
+        )}
       </div>
     </Link>
   );

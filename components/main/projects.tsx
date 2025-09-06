@@ -67,14 +67,28 @@ export const Projects = () => {
       </div>
 
       {/* Section Title with Animation */}
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-[28px] sm:text-[36px] md:text-[42px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10"
-      >
-        {text}
-      </motion.h1>
+    
+
+<div className="w-full max-w-4xl mx-auto px-4">
+  <motion.h1
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="relative text-[28px] sm:text-[36px] md:text-[42px] font-semibold mb-10"
+  >
+    {/* Invisible placeholder keeps space reserved */}
+    <span className="invisible block text-center">
+      Showcase 🚀
+    </span>
+
+    {/* Visible typewriter text with gradient */}
+    <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center 
+                     text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+      {text}
+    </span>
+  </motion.h1>
+</div>
+
 
       {/* Slider Container */}
       <div className="relative w-full max-w-6xl">
@@ -82,7 +96,7 @@ export const Projects = () => {
 <button
   onClick={scrollLeft}
   className="absolute left-3 top-1/2 -translate-y-1/2 
-             bg-white/10 backdrop-blur-lg border border-white/20 
+             bg-black/40 backdrop-blur-lg border border-white/20 
              hover:border-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] 
              text-white p-2 rounded-lg z-10 shadow-md 
              transition-all duration-300 hover:scale-110"
@@ -94,7 +108,7 @@ export const Projects = () => {
 <button
   onClick={scrollRight}
   className="absolute right-3 top-1/2 -translate-y-1/2 
-             bg-white/10 backdrop-blur-lg border border-white/20 
+             bg-black/40 backdrop-blur-lg border border-white/20 
              hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.7)] 
              text-white p-2 rounded-lg z-10 shadow-md 
              transition-all duration-300 hover:scale-110"

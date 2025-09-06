@@ -267,20 +267,27 @@ export const PROJECTS = [
     image: "/projects/hilltell.png",
     link: "https://hilltell.in/index.php",
   },
-  {
-    title: "File Sharing Web Application",
-    description:
-      "File Sharing Web Application – A MERN stack project I developed that enables users to securely upload, share, and manage files online. Built with MongoDB, Express.js, React.js, and Node.js, it features a clean UI, fast performance, and secure file handling",
-    image: "/projects/file sharing app.png",
-    link: "https://github.com/praduman1212/File-Sharing-Web-Application-",
+    {
+    title: "Enterprise Admin Dashboard",
+      description:
+      "The Enterprise Admin Dashboard with API Vault & Workflow Management is a full-stack business management platform built with Next.js, Node.js, and Firebase. It offers intern and employee management, company management, announcements, and a secure API vault within a modern responsive UI. Designed with a 3-tier architecture, it ensures scalability, security, and efficiency through JWT authentication, RBAC, and encrypted storage.",
+    image: "/projects/crm.png",
+    link: "https://cyberclipper-admin-panel-ochre.vercel.app/",
+   
   },
-  
   {
     title: "Portfolio Website",
     description:
       "A Next.js, Tailwind & Three.js personal portfolio demonstrating my expertise in full-stack development—from frontend and backend to cloud, mobile, and AI.",
     image: "/projects/project-3.png",
     link: "https://github.com/praduman1212/My-Portfolio",
+  },
+    {
+    title: "File Sharing Web Application",
+    description:
+      "File Sharing Web Application – A MERN stack project I developed that enables users to securely upload, share, and manage files online. Built with MongoDB, Express.js, React.js, and Node.js, it features a clean UI, fast performance, and secure file handling",
+    image: "/projects/file sharing app.png",
+    link: "https://github.com/praduman1212/File-Sharing-Web-Application-",
   },
 ] as const;
 
