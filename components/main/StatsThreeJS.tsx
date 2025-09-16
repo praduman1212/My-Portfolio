@@ -65,7 +65,7 @@ const StatCard: React.FC<StatCardProps> = ({ stat, delay }) => {
         </p>
       )}
       
-      {/* Glow Effect */}
+   
       <div className={`absolute inset-0 ${stat.gradient} opacity-0 hover:opacity-10 transition-opacity duration-500 rounded-2xl blur-xl`} />
     </motion.div>
   );
