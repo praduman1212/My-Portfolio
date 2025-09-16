@@ -34,7 +34,7 @@ const StatCard: React.FC<StatCardProps> = ({ stat, delay }) => {
         if (isInView) setPlayCount(true);
       }}
     >
-      {/* Gradient Background Effect */}
+     
       <div className={`absolute inset-0 ${stat.gradient} opacity-5 rounded-2xl`} />
       
       {stat.value !== null ? (
