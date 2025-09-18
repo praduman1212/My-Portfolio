@@ -29,28 +29,36 @@ export const Navbar = () => {
           <div className="hidden md:flex md:selffont-bold ml-[8px] sm:ml-[10px] text-sm sm:text-base text-gray-300">Praduman Sharma</div>
         </Link>
 
-        {/* Web Navbar */}
-        <div className="hidden md:flex w-[320px] sm:w-[400px] md:w-[500px] h-full flex-row items-center justify-between md:mr-10 lg:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[8px] sm:mr-[15px] px-[10px] sm:px-[20px] py-[7px] sm:py-[10px] rounded-full text-gray-200 text-xs sm:text-sm">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-              >
-                {link.title}
-              </Link>
-            ))}
-            <Link
-              href={LINKS.whatsapp}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-            >
-              Hire Me
-            </Link>
-          </div>
-        </div>
+       {/* Web Navbar */}
+<div className="hidden md:flex w-[320px] sm:w-[400px] md:w-[500px] h-full flex-row items-center justify-between md:mr-10 lg:mr-20">
+  <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[8px] sm:mr-[15px] px-[10px] sm:px-[20px] py-[7px] sm:py-[10px] rounded-full text-gray-200 text-xs sm:text-sm backdrop-blur-sm shadow-lg">
+    {NAV_LINKS.map((link) => (
+      <Link
+        key={link.title}
+        href={link.link}
+        className="cursor-pointer relative px-2 sm:px-3 py-1 rounded-full 
+                   text-gray-200 hover:text-white transition-all duration-300 
+                   after:absolute after:inset-0 after:rounded-full 
+                   after:bg-gradient-to-r after:from-purple-500 after:to-indigo-500 
+                   after:opacity-0 hover:after:opacity-30 after:transition-opacity"
+      >
+        {link.title}
+      </Link>
+    ))}
+    <Link
+      href={LINKS.whatsapp}
+      target="_blank"
+      rel="noreferrer noopener"
+      className="cursor-pointer relative px-3 py-1 rounded-full 
+                 text-gray-200 hover:text-white transition-all duration-300 
+                 bg-gradient-to-r from-purple-600 to-indigo-600 
+                 hover:scale-105 hover:shadow-xl"
+    >
+      Hire Me
+    </Link>
+  </div>
+</div>
+
 
         {/* Social Icons (Web) */}
         <div className="hidden md:flex flex-row gap-3 sm:gap-5">
