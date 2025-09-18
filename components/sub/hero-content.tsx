@@ -65,12 +65,12 @@ export const HeroContent = () => {
           </motion.a>
         </div>
 
-        {/* Hero Image */}
+        {/* Hero Image - Hidden on mobile */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-full flex justify-center items-center mt-8 md:mt-0"
+          className="hidden sm:flex w-full h-full justify-center items-center mt-8 md:mt-0"
         >
           <Image
             src="/hero-bg.svg"
