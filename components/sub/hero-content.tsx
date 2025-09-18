@@ -56,7 +56,7 @@ export const HeroContent = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            href="/Praduman Sharma's Resume_9520949165.pdf"
+            href="/Praduman_Sharma's_Resume_9520949165.pdf"
             target="_blank"
             rel="noreferrer noopener"
             className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[180px] sm:max-w-[220px] text-sm sm:text-base"
