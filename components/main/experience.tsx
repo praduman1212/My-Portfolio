@@ -9,10 +9,9 @@ const EarthBall = () => {
   const meshRef = useRef<any>();
   const texture = useLoader(
     TextureLoader,
-    "https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg" // realistic earth texture
+    "https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg"
   );
 
-  // Rotate continuously
   useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.y += 0.002;
@@ -61,19 +60,22 @@ const experiences = [
 
 export const Experience = () => {
   const containerRef = useRef(null);
+
+  // Track scroll progress across ENTIRE section
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start center", "end center"],
+    offset: ["start start", "end end"], // start at very top, end at very bottom
   });
 
+  // Map progress → vertical travel
   const orbY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center py-10 sm:py-20 overflow-hidden"
+      className="relative flex flex-col items-center justify-center py-10 sm:py-20"
     >
-      {/* === Background Orb === */}
+      {/* Background Orb */}
       <div className="absolute inset-0 -z-10">
         <Canvas camera={{ position: [0, 0, 6] }}>
           <ambientLight intensity={0.6} />
@@ -95,9 +97,15 @@ export const Experience = () => {
         {/* Vertical line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[2px] sm:w-[4px] bg-gradient-to-b from-purple-500 via-pink-400 to-cyan-500 shadow-[0_0_15px_rgba(147,51,234,0.7)]" />
 
-        {/* Interactive Earth Ball */}
+        {/* Earth Ball */}
         <motion.div
           style={{ top: orbY }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 100,
+            mass: 0.8,
+          }}
           className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60px] sm:w-[90px] h-[60px] sm:h-[90px] rounded-full overflow-hidden shadow-[0_0_25px_rgba(34,211,238,0.9)]"
         >
           <Canvas camera={{ position: [0, 0, 3] }}>
