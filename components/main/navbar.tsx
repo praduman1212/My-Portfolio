@@ -29,9 +29,9 @@ export const Navbar = () => {
           <div className="hidden md:flex md:selffont-bold ml-[8px] sm:ml-[10px] text-sm sm:text-base text-gray-300">Praduman Sharma</div>
         </Link>
 
-       {/* Web Navbar */}
-<div className="hidden md:flex w-[320px] sm:w-[400px] md:w-[500px] h-full flex-row items-center justify-between md:mr-10 lg:mr-20">
-  <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[8px] sm:mr-[15px] px-[10px] sm:px-[20px] py-[7px] sm:py-[10px] rounded-full text-gray-200 text-xs sm:text-sm backdrop-blur-sm shadow-lg">
+      {/* Web Navbar */}
+<div className="hidden sm:flex md:flex lg:flex w-[280px] sm:w-[350px] md:w-[500px] h-full flex-row items-center justify-between md:mr-10 lg:mr-20">
+  <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[8px] sm:mr-[15px] px-[10px] sm:px-[15px] py-[6px] sm:py-[8px] rounded-full text-gray-200 text-xs sm:text-sm backdrop-blur-sm shadow-lg">
     {NAV_LINKS.map((link) => (
       <Link
         key={link.title}
@@ -58,6 +58,7 @@ export const Navbar = () => {
     </Link>
   </div>
 </div>
+
 
 
         {/* Social Icons (Web) */}

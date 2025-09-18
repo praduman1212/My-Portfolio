@@ -32,7 +32,10 @@ export const ProjectCard = ({ src, title, description, link }: ProjectCardProps)
             alt={title}
             width={600}
             height={400}
-            className="max-h-[260px] w-auto object-contain"
+            className="max-h-[260px] w-auto object-contain rounded-lg" // Rounded corners
+            loading="lazy" // Lazy load for better performance
+            placeholder="blur" // Optional: show blurred preview while loading
+            blurDataURL={src} // Required if using placeholder="blur"
           />
         </div>
 
@@ -46,7 +49,7 @@ export const ProjectCard = ({ src, title, description, link }: ProjectCardProps)
         </p>
 
         {/* Read More / Less Button */}
-        {description.split(" ").length > 25 && ( // approx check if text is long
+        {description.split(" ").length > 25 && (
           <button
             onClick={(e) => {
               e.preventDefault(); // prevent Link navigation

@@ -63,7 +63,19 @@ export const HeroContent = () => {
           >
             View Resume
           </motion.a>
+          <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.25 }}
+              href="/Project_and_Socail_Links.pdf"
+              download
+              className="py-2 button-secondary text-center text-white cursor-pointer rounded-lg max-w-[180px] sm:max-w-[220px] text-sm sm:text-base bg-purple-600 hover:bg-purple-700 transition-colors"
+            >
+              See Project List
+            </motion.a>
         </div>
+
+
 
         {/* Hero Image - Hidden on mobile */}
         <motion.div
