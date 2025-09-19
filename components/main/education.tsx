@@ -150,7 +150,7 @@ export const Education = () => {
                    bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 
                    mb-14 z-10 text-center"
       >
-        🚀 Education & Certifications
+         Education & Certifications
       </motion.h2>
 
       {/* Education Section */}
