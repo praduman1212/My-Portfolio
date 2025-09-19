@@ -74,7 +74,7 @@ const StatCard: React.FC<StatCardProps> = ({ stat, delay }) => {
 const StatsPage = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Image */}
+  
      <div
   className="absolute inset-0 bg-cover bg-center bg-no-repeat"
   style={{ backgroundImage: "url(/tech-bg.jpg)" }}
