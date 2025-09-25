@@ -81,8 +81,7 @@ const StatsPage = () => {
 />
 
 
-      
-      {/* Background Overlay */}
+    
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       
       {/* Floating Background Element */}
