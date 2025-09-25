@@ -50,7 +50,7 @@ export const Projects = () => {
       id="projects"
       className="relative flex flex-col items-center justify-center py-20 overflow-hidden"
     >
-      {/* Three.js Background */}
+      
       <div className="absolute inset-0 -z-10 opacity-30">
         <Canvas camera={{ position: [0, 0, 3] }}>
           <ambientLight intensity={0.6} />
