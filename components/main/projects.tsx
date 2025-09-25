@@ -24,7 +24,7 @@ export const Projects = () => {
   const scrollLeft = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollBy({
-        left: isMobile ? -320 : -650, // adjust scroll size
+        left: isMobile ? -320 : -650, 
         behavior: "smooth",
       });
     }
