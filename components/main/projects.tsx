@@ -66,7 +66,7 @@ export const Projects = () => {
         </Canvas>
       </div>
 
-      {/* Section Title with Animation */}
+    
     
 
 <div className="w-full max-w-4xl mx-auto px-4">
