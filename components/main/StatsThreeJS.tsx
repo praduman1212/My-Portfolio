@@ -90,7 +90,7 @@ const StatsPage = () => {
   style={{ backgroundImage: "url(/dev-workspace.jpg)" }}
 />
 
-      {/* Content Container */}
+      
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Header Section - Left Aligned */}
         <div className="flex-1 flex items-center px-8 lg:px-16">
