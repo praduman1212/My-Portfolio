@@ -92,7 +92,7 @@ const StatsPage = () => {
 
       
       <div className="relative z-10 flex flex-col min-h-screen">
-        {/* Header Section - Left Aligned */}
+       
         <div className="flex-1 flex items-center px-8 lg:px-16">
           <div className="max-w-2xl">
             <motion.div
