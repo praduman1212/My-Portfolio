@@ -13,7 +13,7 @@ export const Projects = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect screen size for responsiveness
+  
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     handleResize();
