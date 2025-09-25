@@ -117,7 +117,7 @@ Let’s shape your next digital experience together.
           </div>
         </div>
         
-        {/* Stats Section */}
+        
         <div className="px-8 lg:px-16 pb-16">
           <div className="flex flex-wrap justify-center lg:justify-start gap-6">
             {stats.map((stat, idx) => (
