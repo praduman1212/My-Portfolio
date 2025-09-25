@@ -117,7 +117,7 @@ export const Projects = () => {
 </button>
 
 
-        {/* Scrollable Cards */}
+        
         <div
           ref={sliderRef}
           className="flex overflow-x-hidden gap-6 px-12 py-4 snap-x snap-mandatory scroll-smooth"
