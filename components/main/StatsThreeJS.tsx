@@ -84,7 +84,7 @@ const StatsPage = () => {
     
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       
-      {/* Floating Background Element */}
+     
      <div
   className="absolute top-10 right-10 w-96 h-64 bg-cover bg-center rounded-3xl opacity-20 blur-md"
   style={{ backgroundImage: "url(/dev-workspace.jpg)" }}
