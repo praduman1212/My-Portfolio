@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-label="YogSkool mobile app">
+  <defs>
+    <linearGradient id="yg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#134e4a"/>
+      <stop offset="100%" style="stop-color:#581c87"/>
+    </linearGradient>
+    <linearGradient id="lotus" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2dd4bf"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#yg)" rx="16"/>
+  <text x="300" y="72" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="28" font-weight="700">YogSkool</text>
+  <text x="300" y="104" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13">Partners • Spaces • Institute • Zumba</text>
+  <path fill="url(#lotus)" opacity="0.95" d="M300 140c-28 48-80 72-120 88 40 16 92 40 120 88 28-48 80-72 120-88-40-16-92-40-120-88zm0 36c-14 24-40 36-60 44 20 8 46 20 60 44 14-24 40-36 60-44-20-8-46-20-60-44z"/>
+  <rect x="210" y="268" width="180" height="88" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <rect x="228" y="286" width="144" height="52" rx="8" fill="#1e293b"/>
+  <circle cx="300" cy="312" r="6" fill="#2dd4bf"/>
+</svg>

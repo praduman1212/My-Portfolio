@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 type ProjectCardProps = {
   src: string;
@@ -9,8 +9,26 @@ type ProjectCardProps = {
   link: string;
 };
 
+/** Renders `**like this**` in copy as highlighted technology terms. */
+function renderHighlightedDescription(description: string) {
+  const parts = description.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <span
+        key={i}
+        className="font-semibold text-cyan-300 [text-shadow:0_0_12px_rgba(34,211,238,0.35)]"
+      >
+        {part}
+      </span>
+    ) : (
+      <Fragment key={i}>{part}</Fragment>
+    )
+  );
+}
+
 export const ProjectCard = ({ src, title, description, link }: ProjectCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const plainWords = description.replace(/\*\*/g, "").trim().split(/\s+/).filter(Boolean);
 
   return (
     <Link
@@ -45,11 +63,11 @@ export const ProjectCard = ({ src, title, description, link }: ProjectCardProps)
             !isExpanded ? "line-clamp-4" : ""
           }`}
         >
-          {description}
+          {renderHighlightedDescription(description)}
         </p>
 
         {/* Read More / Less Button */}
-        {description.split(" ").length > 25 && (
+        {plainWords.length > 25 && (
           <button
             onClick={(e) => {
               e.preventDefault(); // prevent Link navigation
