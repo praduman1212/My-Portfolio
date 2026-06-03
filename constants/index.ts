@@ -258,7 +258,7 @@ export const PROJECTS = [
     description:
       "TrendingHashtag.in – An AI-powered hashtag generator that helps creators and businesses boost their social media reach. It provides country-specific trending hashtags, removes banned tags to ensure safe posting, and offers extra tools like couple/wedding hashtag generators and media downloaders, all in one platform.",
     image: "/projects/trendinghashtag.png",
-    link: "https://trendinghashtag.in/",
+    link: "https://trending-hashtags.vercel.app/",
   },
   {
     title: "ISP Website (Hilltell)",
