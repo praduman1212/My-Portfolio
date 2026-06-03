@@ -35,11 +35,14 @@ export const ProjectCard = ({ src, title, description, link }: ProjectCardProps)
       href={link}
       target="_blank"
       rel="noreferrer noopener"
-      className="relative overflow-hidden rounded-xl shadow-lg border border-[#2A0E61] bg-[rgba(3,0,20,0.7)] transition transform hover:scale-105 hover:shadow-purple-500/40"
+      className="relative overflow-hidden rounded-xl shadow-lg border border-[#2A0E61] bg-[rgba(3,0,20,0.7)] transition transform hover:scale-105 hover:shadow-purple-500/40 min-w-0"
     >
-      <div className="p-3 sm:p-4">
-        {/* Project Title */}
-        <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-cyan-400 mb-2">
+      <div className="p-3 sm:p-4 min-w-0">
+        {/* Project Title — single line; hover for full text on narrow viewports */}
+        <h1
+          title={title}
+          className="text-base sm:text-lg md:text-xl font-bold text-cyan-400 mb-2 truncate"
+        >
           {title}
         </h1>
 

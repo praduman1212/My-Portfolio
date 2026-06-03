@@ -129,7 +129,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className={`flex-shrink-0 ${
+              className={`flex-shrink-0 min-w-0 ${
                 isMobile ? "w-full" : "w-[calc(50%-12px)]"
               } snap-center`}
             >
