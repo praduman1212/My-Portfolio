@@ -268,7 +268,7 @@ export const PROJECTS = [
     link: "https://github.com/praduman1212",
   },
   {
-    title: "EzoPOS — ezopos.com",
+    title: "EzoPOS — Inventory & billing software",
     description:
       "**EzoPOS** at **ezopos.com** is a retail and outlet operations platform built for chains that need one system for stock, billing, and role-based control across many stores. Technologies: **Next.js**, **TypeScript**, **Node.js**, **Express.js**, **REST APIs**, **Firebase Authentication** and **Cloud Firestore** for secure sign-in and live sync, **UPI** and payment integrations for fast checkout and settlements, and **GitHub** for source control and delivery workflows. Access is organized around multiple logins—**super admin**, **outlet**, **employee**, and **manager** roles—each with scoped permissions. Features we provide: **outlet management** (outlets, counters, and day-to-day operations), full **billing** and invoicing flows, **stats and analytics** dashboards for sales and performance, **stock alerts** and inventory visibility so low or critical SKUs never surprise you, and operational tooling that keeps outlets, staff, and leadership aligned.",
     image: "/projects/inventory-billing.svg",
