@@ -138,6 +138,12 @@ export const Projects = () => {
                 title={project.title}
                 description={project.description}
                 link={project.link}
+                gallery={"gallery" in project ? project.gallery : undefined}
+                gallerySingleAutoplayMs={
+                  "gallerySingleAutoplayMs" in project
+                    ? project.gallerySingleAutoplayMs
+                    : undefined
+                }
               />
             </motion.div>
           ))}

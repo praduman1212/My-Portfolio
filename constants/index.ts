@@ -258,21 +258,43 @@ export const PROJECTS = [
     description:
       "YogSkool is a full-stack wellness platform that connects practitioners, instructors, and venues in one ecosystem—so communities can grow classes, courses, and brands without juggling five different apps. Technologies: **Flutter** and **Dart** (developed with **Android Studio**), **Firebase** (Authentication, Cloud Messaging, and Firestore or Cloud Storage for real-time feeds and media metadata), **Node.js**, **Express.js**, **TypeScript**, **REST APIs**, **Socket.io** for realtime events, presence, and messaging, **Agora** for HD **video calls** and live virtual classes, plus curated **third-party APIs** (maps, SMS, analytics, and more as needed), **payment gateway** integrations, **Git** and **GitHub** for version control and **CI/CD** workflows, **Docker** for repeatable builds and deployments, **AWS** (**EC2** for application hosting, **Amazon S3** for media and assets, **RDS** for managed **PostgreSQL**), and **Vercel** for edge-friendly web or API surfaces—plus push notifications and a robust role-based access control (**RBAC**) layer with multiple account types and instructor login flows. Features we provide: find yoga partners and build practice circles; discover and list yoga spaces and properties; create and promote events; post free job listings for studios and teachers; create reels for discovery and engagement; analytics management for reach, attendance, and revenue signals; launch TTC (Teacher Training Course) programs; schedule and publish live or recorded sessions; spin up your own virtual or online institute and wellness center; dedicated instructor tools and dashboards; Zumba and multi-format class support; and polished multi-role login so students, teachers, studio owners, and admins each see exactly what they need.",
     image: "/projects/yoga-mobile-app.svg",
-    link: "https://github.com/praduman1212",
+    gallery: [
+      "/projects/yoga-1.jpeg",
+      "/projects/yoga-2.jpeg",
+      "/projects/yoga-3.jpeg",
+      "/projects/yoga-4.jpeg",
+    ] as const,
+    link: "https://drive.google.com/drive/folders/1NvQIy79BgGDpzAmWRu2zj3GN6-35Sf3f?usp=drive_link",
   },
   {
     title: "iCureIn — Clinic & telemedicine",
     description:
       "iCureIn is a clinic-grade digital health suite that unifies front-desk operations, clinical workflows, and remote care—built for hospitals, polyclinics, and growing practices that need one secure system instead of fragmented tools. Technologies: **Next.js** and **TypeScript** for responsive clinic, physician, and patient/caretaker web experiences; **Node.js** and **Express.js** exposing versioned **REST APIs**; **PostgreSQL** on **Amazon RDS** with optional read scaling patterns; **AWS EC2** for application workloads, **Amazon S3** for documents, imaging, and exports, and **IAM**-aware deployment practices; **Firebase** for authentication helpers, real-time listeners, and Cloud Messaging where instant alerts matter; first-class integrations with **third-party APIs** (video, SMS, email, e-labs, e-pharmacy, and insurer or clearinghouse hooks as required); **payment gateway** integrations with receipts and reconciliation views; **Git** and **GitHub** for branching, reviews, and delivery automation; **JWT**-based **RBAC** across user/patient, caretaker, doctor, nurse, reception, billing, and admin roles; and **WebRTC** or managed video SDKs for secure telemedicine sessions. Features we provide: full clinic management—OPD queues, departments, staff roster, and inventory-aware prescription templates; structured **EHR** with visit notes, diagnoses, allergies, immunizations, attachments, and longitudinal timelines; dedicated caretaker access to book visits, share reports, and coordinate care for dependents; patient self-service for appointments, documents, and reminders; telemedicine with secure video calls, waiting rooms, and session logs; doctor schedule management with slots, buffers, leave blocks, and automatic conflict checks; billing, invoices, packages, and insurance-ready fields where applicable; in-app messaging and notifications; lab/imaging order tracking; consent and audit trails for compliance; analytics for load, revenue, and no-shows—designed for reliability, privacy, and day-to-day speed at the front desk and in the consulting room.",
     image: "/projects/icurein-health.svg",
-    link: "https://github.com/praduman1212",
+    gallery: [
+      "/projects/icurein-1.jpeg",
+      "/projects/icurein-2.jpeg",
+      "/projects/icurein-3.jpeg",
+      "/projects/icurein-4.jpeg",
+    ] as const,
+    gallerySingleAutoplayMs: 4000,
+    link: "https://i-cure-in.vercel.app/",
   },
   {
     title: "EzoPOS — Inventory & billing software",
     description:
       "**EzoPOS** at **ezopos.com** is a retail and outlet operations platform built for chains that need one system for stock, billing, and role-based control across many stores. Technologies: **Next.js**, **TypeScript**, **Node.js**, **Express.js**, **REST APIs**, **Firebase Authentication** and **Cloud Firestore** for secure sign-in and live sync, **UPI** and payment integrations for fast checkout and settlements, and **GitHub** for source control and delivery workflows. Access is organized around multiple logins—**super admin**, **outlet**, **employee**, and **manager** roles—each with scoped permissions. Features we provide: **outlet management** (outlets, counters, and day-to-day operations), full **billing** and invoicing flows, **stats and analytics** dashboards for sales and performance, **stock alerts** and inventory visibility so low or critical SKUs never surprise you, and operational tooling that keeps outlets, staff, and leadership aligned.",
     image: "/projects/inventory-billing.svg",
-    link: "https://ezopos.com",
+    link: "https://inventory-and-billing-software.vercel.app/",
+  },
+  {
+    title: "Specsvue.in — Client eyewear site",
+    description:
+      "**Specsvue.in** is a full **storefront** plus **admin panel** I shipped for a client in **2 days** only—a fast, **futuristic** eyewear experience on the front and a control center behind it so they never need a dev for day-to-day changes. Technologies: **Next.js**, **Tailwind CSS**, **Firebase** (Authentication, Firestore or Realtime Database for configurable content, and Storage for media), **GitHub** for collaboration and releases, and **payment gateway** integrations for secure checkout. I built a **discount** and **coupon** utility so campaigns and codes are easy to create and track, full **sale** flows for promotions and clearance-style events, and **prescription-based** pricing rules so eligible eyewear or lens bundles can auto-apply the right **discount** at checkout. The admin experience stays **dynamic**: owners can switch the site **color theme**, manage **hero** imagery, and keep **inventory**, **billing**, **stats**, and **analytics** aligned with the live shop—so the brand looks cutting-edge while the operations stay grounded.",
+    image: "/projects/specsvue.svg",
+    gallery: ["/projects/frontstore.png", "/projects/admin.png"] as const,
+    gallerySingleAutoplayMs: 4000,
+    link: "https://www.specsvue.in/",
   },
   {
     title: "Trendinghashtag.in",
