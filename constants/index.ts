@@ -284,7 +284,15 @@ export const PROJECTS = [
     title: "EzoPOS — Inventory & billing software",
     description:
       "**EzoPOS** at **ezopos.com** is a retail and outlet operations platform built for chains that need one system for stock, billing, and role-based control across many stores. Technologies: **Next.js**, **TypeScript**, **Node.js**, **Express.js**, **REST APIs**, **Firebase Authentication** and **Cloud Firestore** for secure sign-in and live sync, **UPI** and payment integrations for fast checkout and settlements, and **GitHub** for source control and delivery workflows. Access is organized around multiple logins—**super admin**, **outlet**, **employee**, and **manager** roles—each with scoped permissions. Features we provide: **outlet management** (outlets, counters, and day-to-day operations), full **billing** and invoicing flows, **stats and analytics** dashboards for sales and performance, **stock alerts** and inventory visibility so low or critical SKUs never surprise you, and operational tooling that keeps outlets, staff, and leadership aligned.",
-    image: "/projects/inventory-billing.svg",
+    image: "/projects/inventory -1.png",
+    gallery: [
+      "/projects/inventory -1.png",
+      "/projects/inventory -2.png",
+      "/projects/inventory -3.png",
+      "/projects/inventory -4.png",
+      "/projects/inventory -5.png",
+    ] as const,
+    gallerySingleAutoplayMs: 4000,
     link: "https://inventory-and-billing-software.vercel.app/",
   },
   {
